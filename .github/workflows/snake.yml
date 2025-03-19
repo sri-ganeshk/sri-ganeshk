@@ -1,0 +1,21 @@
+name: Generate Snake
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight
+  workflow_dispatch: # Optional: Allow manual triggering
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: Platane/snk@v3.2.0
+        with:
+          github_user_name: sri-ganeshk
+          palette: default # Or choose another palette
+          color_snake: '#00ff00' # Optional: Customize snake color
+          color_dots: '#ffffff' # Optional: Customize dots color
+      - uses: actions/upload-artifact@v3
+        with:
+          name: snake
+          path: snake.svg # Or snake.gif
+          retention-days: 1
