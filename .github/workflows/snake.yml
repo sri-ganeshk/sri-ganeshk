@@ -14,7 +14,7 @@ jobs:
           palette: default # Or choose another palette
           color_snake: '#00ff00' # Optional: Customize snake color
           color_dots: '#ffffff' # Optional: Customize dots color
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: snake
           path: snake.svg # Or snake.gif
