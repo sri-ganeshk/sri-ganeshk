@@ -12,21 +12,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: Platane/snk@v3.2.0
+      - name: Generate Snake Animation
+        uses: Platane/snk@v3.2.0
         with:
           github_user_name: sri-ganeshk
-          palette: default
-          color_snake: '#00ff00'
-          color_dots: '#ffffff'
+          outputs: dist/snake.svg  # Output directory
 
       - name: Check generated files
-        run: ls -la  # Check if snake.svg is generated
+        run: ls -la dist  # Check if snake.svg is generated in the 'dist' folder
 
       - name: Commit and push the snake.svg
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add snake.svg
+          git add dist/snake.svg
           git commit -m "Update snake animation" || echo "No changes to commit"
           git push
+
 
