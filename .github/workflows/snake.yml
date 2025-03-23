@@ -4,8 +4,15 @@ on:
     - cron: '0 0 * * *' # Runs daily at midnight
   workflow_dispatch: # Allow manual triggering
 
+name: Generate Snake
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at midnight
+  workflow_dispatch: # Allows manual triggering
+
 permissions:
-  contents: write  # Give push access
+  contents: write  # Allows pushing the snake file
 
 jobs:
   build:
@@ -16,12 +23,12 @@ jobs:
         uses: Platane/snk@v3.2.0
         with:
           github_user_name: sri-ganeshk
-          outputs: dist/snake.svg  # Output directory
+          outputs: dist/snake.svg  # Saves the snake animation
 
-      - name: Check generated files
-        run: ls -la dist  # Check if snake.svg is generated in the 'dist' folder
+      - name: Check if the snake was generated
+        run: ls -la dist  # Debugging to check if the file exists
 
-      - name: Commit and push the snake.svg
+      - name: Commit and Push the generated snake.svg
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
