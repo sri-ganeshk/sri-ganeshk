@@ -39,7 +39,7 @@
 <h3 align="center">🏆 Achievements</h3>
 
 - AWS Certified Cloud Practitioner 🌩️
-- Top 10% performer in CodeChef & LeetCode contests (Username: **sri_2498**)
+- Top 10% performer in CodeChef & LeetCode contests 
 - Built scalable apps and APIs with MERN Stack + AWS
 
 ---
