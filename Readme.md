@@ -50,7 +50,11 @@
 <h3 align="center">📊 GitHub Stats & Snake Animation</h3>
 
 <p align="center">
-  <img alt="github-snake" src="https://raw.githubusercontent.com/sri-ganeshk/sri-ganeshk/main/output/github-snake-dark.svg" />
+  <img
+    src="https://raw.githubusercontent.com/sri-ganeshk/sri-ganeshk/main/output/github-snake-light.svg"
+    data-dark-theme="https://raw.githubusercontent.com/sri-ganeshk/sri-ganeshk/main/output/github-snake-dark.svg"
+    alt="github-snake"
+  />
 </p>
 
 
