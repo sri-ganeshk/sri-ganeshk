@@ -5,11 +5,10 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&pause=1000&center=true&vCenter=true&width=435&lines=Software+Engineer;MERN+Stack+Developer;Cloud+Enthusiast;Lifelong+Learner" alt="Typing SVG" />
 </p>
 
----
 
-- 🌱 Currently learning **React Native** and expanding my mobile development skills
-- 💬 Ask me about **React**, **Node.js**, **AWS**, and **Cloud Deployments**
-- 📫 Reach me at: **ganeshknsml@gmail.com**
+- 🌱 Currently learning **React Native** and expanding my mobile development skills  
+- 💬 Ask me about **React**, **Node.js**, **AWS**, and **Cloud Deployments**  
+- 📫 Reach me at: **ganeshknsml@gmail.com**  
 - ⚡ Fun fact: I love building scalable systems and exploring new tech trends!
 
 ---
@@ -38,11 +37,21 @@
 
 <h3 align="center">🏆 Achievements</h3>
 
-- AWS Certified Cloud Practitioner 🌩️
-- Top 10% performer in CodeChef & LeetCode contests 
+- AWS Certified Cloud Practitioner 🌩️  
+- Top 10% performer in CodeChef & LeetCode contests  
 - Built scalable apps and APIs with MERN Stack + AWS
 
 ---
 
 <h3 align="center">🚀 Let's Connect and Collaborate!</h3>
+
+---
+
+<h3 align="center">📊 GitHub Stats & Snake Animation</h3>
+
+<p align="center">
+  <img alt="github-snake" src="https://raw.githubusercontent.com/sri-ganeshk/sri-ganeshk/main/output/github-snake-dark.svg" />
+</p>
+
+
 
