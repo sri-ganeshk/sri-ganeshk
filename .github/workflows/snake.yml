@@ -1,10 +1,8 @@
 name: Update GitHub Snake
 
 on:
-  # every day at 00:00 UTC
   schedule:
     - cron: '0 0 * * *'
-  # also on push to main/master so it runs immediately after you add it
   push:
     branches:
       - main
@@ -20,10 +18,12 @@ jobs:
       - name: Generate GitHub Snake
         uses: Platane/snk@v1
         with:
-          # where to write the snake SVG
-          path: output/github-snake.svg
-          # you can customize the snake color here:
-          color: 79,195,247
+          # Your GitHub username
+          github_user_name: sri-ganeshk
+          # Where to write the SVG
+          svg_out_path: output/github-snake.svg
+          # Any extra snk CLI args—here we set the snake color
+          args: --color 79,195,247
 
       - name: Commit updated snake
         run: |
