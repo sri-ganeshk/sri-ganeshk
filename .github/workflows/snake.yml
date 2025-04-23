@@ -2,7 +2,7 @@ name: Update GitHub Snake
 
 on:
   schedule:
-    - cron: '0 0 * * *'       # nightly at 00:00 UTC
+    - cron: '0 0 * * *'     # every day at 00:00 UTC
   push:
     branches: [ main, master ]
 
@@ -10,16 +10,17 @@ jobs:
   snake:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Generate light & dark SVG-only Snakes
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            output/github-snake-light.svg?palette=github-light&color_snake=79,195,247
-            output/github-snake-dark.svg?palette=github-dark&color_snake=79,195,247
+            # light-mode snake in purple (RGB 128,0,128)
+            output/github-snake-light.svg?palette=github-light&color_snake=128,0,128
+            # dark-mode snake (uses GitHub’s dark palette)
+            output/github-snake-dark.svg?palette=github-dark&color_snake=128,0,128
 
       - name: Commit updated snakes
         run: |
@@ -28,3 +29,4 @@ jobs:
           git add output/github-snake-light.svg output/github-snake-dark.svg
           git commit -m "chore: update github-snake svgs" || echo "No changes to commit"
           git push
+
