@@ -3,7 +3,7 @@ name: Update GitHub Snake
 
 on:
   schedule:
-    - cron: '0 0 * * *'     # every day at midnight UTC
+    - cron: '0 0 * * *'      # daily at midnight UTC
   push:
     branches: [ main, master ]
 
@@ -14,19 +14,18 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
 
-      - name: Generate SVG-only Snake
+      - name: Generate dark SVG-only Snake
         uses: Platane/snk/svg-only@v3
         with:
-          # your GitHub username or repo owner
           github_user_name: ${{ github.repository_owner }}
-          # where to write the file, plus any query-string customizations
+          # output to output/github-snake-dark.svg, using the dark palette
           outputs: |
-            output/github-snake.svg?color_snake=79,195,247&palette=github-light
+            output/github-snake-dark.svg?palette=github-dark
 
       - name: Commit updated snake
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add output/github-snake.svg
-          git commit -m "chore: update github-snake.svg" || echo "No changes to commit"
+          git add output/github-snake-dark.svg
+          git commit -m "chore: update github-snake-dark.svg" || echo "No changes to commit"
           git push
