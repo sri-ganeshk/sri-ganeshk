@@ -6,6 +6,8 @@
 </p>
 
 
+![](https://komarev.com/ghpvc/?username=sri-ganeshk&color=brightgreen)
+
 - 🌱 Currently learning **React Native** and expanding my mobile development skills  
 - 💬 Ask me about **React**, **Node.js**, **AWS**, and **Cloud Deployments**  
 - 📫 Reach me at: **ganeshknsml@gmail.com**  
